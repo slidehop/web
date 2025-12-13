@@ -1,0 +1,262 @@
+/* FONT */
+@font-face {
+  font-family: "FFFFORWA";
+  src: url("./fonts/FFFFORWA.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* BASIC LAYOUT */
+body {
+  font-family: "FFFFORWA", Arial, sans-serif;
+  padding: 20px;
+  background: #0f0f0f;
+  color: white;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-size: 32px;
+}
+
+/* CONTROL PANEL */
+#controls {
+  max-width: 900px;
+  margin: 0 auto 25px auto;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#controls input,
+#controls select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #222;
+  color: white;
+  font-size: 1em;
+}
+
+/* GALLERY GRID */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px); /* fixed width */
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
+}
+
+/* CARD STYLE */
+.skin-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* name + type at top */
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: rgba(0,0,0,.6);
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.25s, box-shadow 0.25s;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.skin-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 10px rgba(255,255,255,0.15);
+}
+
+/* NAME & TYPE */
+.skin-name-type {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.skin-name {
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.skin-details {
+  font-size: 0.85rem;
+  color: #ccc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* IMAGE FIT */
+.skin-img {
+  width: 100%;
+  height: auto;
+  max-height: 70%; /* keep name/type visible */
+  object-fit: contain;
+  display: block;
+  margin-top: -6px;
+}
+
+/* RARITY COLORS */
+.uncommon { border-color: #b2f252; color: #b2f252; }
+.rare { border-color: #2196F3; color: #2196F3; }
+.epic { border-color: #E040FB; color: #E040FB; }
+.legendary { border-color: #FBC02D; color: #FBC02D; }
+.relic { border-color: #ed4242; color: #ed4242; }
+.contraband { border-color: #292929; color: #292929; }
+.unobtainable { animation: rainbow .5s linear infinite; }
+.nft { border-color: #f3b8ff; color: #f3b8ff; }
+
+/* ITEM POPUP RARITY CLASSES */
+.itemViewType-uncommon { background: #b2f252; color: white; }
+.itemViewType-rare { background: #2196F3; color: white; }
+.itemViewType-epic { background: #E040FB; color: white; }
+.itemViewType-legendary { background: #FBC02D; color: white; }
+.itemViewType-relic { background: #ed4242; color: white; }
+.itemViewType-contraband { background: #292929; color: white; }
+.itemViewType-unobtainable { color: white; animation: rainbowBG 0.5s linear infinite; }
+.itemViewType-nft { background: #f3b8ff; color: white; }
+
+.itemViewPop-uncommon { border-color: #b2f252 !important;}
+.itemViewPop-rare { border-color: #2196F3 !important;}
+.itemViewPop-epic { border-color: #E040FB !important;}
+.itemViewPop-legendary { border-color: #FBC02D !important;}
+.itemViewPop-relic { border-color: #ed4242 !important;}
+.itemViewPop-contraband { border-color: #292929  !important;}
+.itemViewPop-unobtainable { border-color: white; animation: rainbow .5s linear infinite; }
+.itemViewPop-nft {border-color: #f3b8ff !important;}
+
+/* RAINBOW EFFECT */
+@keyframes rainbow {
+  0%,100%{color: Crimson;border-color: Crimson;}
+  20%{color: orange;border-color: orange;}
+  40%{color: yellow;border-color: yellow;}
+  60%{color: lime;border-color: lime;}
+  80%{color: MediumBlue;border-color: MediumBlue;}
+}
+
+/* POPUP BACKDROP */
+#popupHolder {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+  z-index: 50;
+}
+
+#popupBack {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  cursor: pointer;
+}
+
+/* POPUP WINDOW */
+#itemViewPop {
+  position: relative;
+  width: 600px;
+  background: rgba(156, 156, 156, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+  border: 4px solid #fff53d;
+  z-index: 51;
+  text-align: center;
+}
+
+#itemViewName {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#itemViewType {
+  padding: 4px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+#itemViewFrame {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(156, 156, 156, 0.7);
+  margin-bottom: 10px;
+}
+
+#itemInfoBtn {
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+#itemInfoBtn:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* RGB ANIMATED SKINS */
+.skin-img[src*="1_203.png"],
+.skin-img[src*="2_203.png"],
+.skin-img[src*="4_184.png"],
+.skin-img[src*="5_4.png"],
+.skin-img[src*="5_256.png"],
+.skin-img[src*="6_m0_216.png"],
+.skin-img[src*="7_121.png"],
+.skin-img[src*="8_m0_161.png"],
+.skin-img[src*="9_74.png"],
+.skin-img[src*="10_m0_41.png"],
+.skin-img[src*="11_118.png"],
+.skin-img[src*="12_10.png"],
+.skin-img[src*="14_45.png"],
+.skin-img[src*="15_242.png"],
+.skin-img[src*="16_32.png"],
+.skin-img[src*="17_101.png"],
+.skin-img[src*="19_71.png"],
+.skin-img[src*="22_15.png"],
+.skin-img[src*="23_9.png"],
+.skin-img[src*="25_11.png"],
+.skin-img[src*="28_13.png"],
+.skin-img[src*="29_3.png"],
+.skin-img[src*="melee_0_10.png"] {
+    -webkit-animation: rgbHue 0.8s steps(36) infinite;
+    animation: rgbHue 0.8s steps(36) infinite;
+}
+
+@keyframes rgbHue {
+    from {
+        -webkit-filter: hue-rotate(10deg) brightness(2);
+        filter: hue-rotate(10deg) brightness(2);
+    }
+    to {
+        -webkit-filter: hue-rotate(360deg) brightness(2);
+        filter: hue-rotate(360deg) brightness(2);
+    }
+}
+
+/* SKIN CARD NAME COLORS */
+.skin-card.uncommon .skin-name { color: #b2f252; }
+.skin-card.rare .skin-name { color: #2196F3; }
+.skin-card.epic .skin-name { color: #E040FB; }
+.skin-card.legendary .skin-name { color: #FBC02D; }
+.skin-card.relic .skin-name { color: #ed4242; }
+.skin-card.contraband .skin-name { color: #292929; }
+.skin-card.unobtainable .skin-name { animation: rainbow 0.5s linear infinite; }
+.skin-card.nft .skin-name { color: #f3b8ff; }
