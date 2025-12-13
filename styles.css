@@ -1,4 +1,3 @@
-/* FONT */
 @font-face {
   font-family: "FFFFORWA";
   src: url("./fonts/FFFFORWA.TTF") format("truetype");
@@ -6,11 +5,10 @@
   font-style: normal;
 }
 
-/* BASIC LAYOUT */
 body {
+  background-image: url(https://i.postimg.cc/RCTjchY1/1309903.jpg);
   font-family: "FFFFORWA", Arial, sans-serif;
   padding: 20px;
-  background: #0f0f0f;
   color: white;
   margin: 0;
 }
@@ -22,7 +20,6 @@ h1 {
   font-size: 32px;
 }
 
-/* CONTROL PANEL */
 #controls {
   max-width: 900px;
   margin: 0 auto 25px auto;
@@ -42,21 +39,19 @@ h1 {
   font-size: 1em;
 }
 
-/* GALLERY GRID */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 150px); /* fixed width */
+  grid-template-columns: repeat(auto-fill, 150px);
   justify-content: center;
   gap: 25px;
   width: 100%;
 }
 
-/* CARD STYLE */
 .skin-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* name + type at top */
+  justify-content: flex-start;
   width: 100%;
   aspect-ratio: 1 / 1;
   background: rgba(0,0,0,.6);
@@ -73,7 +68,6 @@ h1 {
   box-shadow: 0 0 10px rgba(255,255,255,0.15);
 }
 
-/* NAME & TYPE */
 .skin-name-type {
   text-align: center;
   width: 100%;
@@ -97,17 +91,15 @@ h1 {
   text-overflow: ellipsis;
 }
 
-/* IMAGE FIT */
 .skin-img {
   width: 100%;
   height: auto;
-  max-height: 70%; /* keep name/type visible */
+  max-height: 70%;
   object-fit: contain;
   display: block;
   margin-top: -6px;
 }
 
-/* RARITY COLORS */
 .uncommon { border-color: #b2f252; color: #b2f252; }
 .rare { border-color: #2196F3; color: #2196F3; }
 .epic { border-color: #E040FB; color: #E040FB; }
@@ -117,7 +109,6 @@ h1 {
 .unobtainable { animation: rainbow .5s linear infinite; }
 .nft { border-color: #f3b8ff; color: #f3b8ff; }
 
-/* ITEM POPUP RARITY CLASSES */
 .itemViewType-uncommon { background: #b2f252; color: white; }
 .itemViewType-rare { background: #2196F3; color: white; }
 .itemViewType-epic { background: #E040FB; color: white; }
@@ -136,7 +127,6 @@ h1 {
 .itemViewPop-unobtainable { border-color: white; animation: rainbow .5s linear infinite; }
 .itemViewPop-nft {border-color: #f3b8ff !important;}
 
-/* RAINBOW EFFECT */
 @keyframes rainbow {
   0%,100%{color: Crimson;border-color: Crimson;}
   20%{color: orange;border-color: orange;}
@@ -145,7 +135,6 @@ h1 {
   80%{color: MediumBlue;border-color: MediumBlue;}
 }
 
-/* POPUP BACKDROP */
 #popupHolder {
   position: fixed;
   inset: 0;
@@ -163,7 +152,6 @@ h1 {
   cursor: pointer;
 }
 
-/* POPUP WINDOW */
 #itemViewPop {
   position: relative;
   width: 600px;
@@ -212,7 +200,6 @@ h1 {
   background: rgba(255,255,255,0.4);
 }
 
-/* RGB ANIMATED SKINS */
 .skin-img[src*="1_203.png"],
 .skin-img[src*="2_203.png"],
 .skin-img[src*="4_184.png"],
@@ -251,7 +238,6 @@ h1 {
     }
 }
 
-/* SKIN CARD NAME COLORS */
 .skin-card.uncommon .skin-name { color: #b2f252; }
 .skin-card.rare .skin-name { color: #2196F3; }
 .skin-card.epic .skin-name { color: #E040FB; }
@@ -260,3 +246,4 @@ h1 {
 .skin-card.contraband .skin-name { color: #292929; }
 .skin-card.unobtainable .skin-name { animation: rainbow 0.5s linear infinite; }
 .skin-card.nft .skin-name { color: #f3b8ff; }
+
