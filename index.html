@@ -1,65 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Krunker Skins Gallery</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <title>Krunker Skins Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <h1>Krunker.io Skins Gallery</h1>
 
-  <h1>Krunker.io Skins Gallery</h1>
-
-  <!-- SEARCH + FILTER BAR -->
-  <div id="controls">
-
-    <input
-      type="text"
-      id="search-input"
-      placeholder="Search skins..."
-      aria-label="Search skins"
-    />
-
-    <select id="rarity-filter">
-      <option value="">All Rarities</option>
-      <option value="uncommon">Uncommon</option>
-      <option value="rare">Rare</option>
-      <option value="epic">Epic</option>
-      <option value="legendary">Legendary</option>
-      <option value="relic">Relic</option>
-      <option value="contraband">Contraband</option>
-      <option value="unobtainable">Unobtainable</option>
-      <option value="nft">NFT</option>
-    </select>
-
-    <select id="type-filter">
-      <option value="">All Types</option>
-    </select>
-
-    <select id="sort-select">
-      <option value="rarity">Sort: Rarity</option>
-      <option value="name">Sort: Name</option>
-      <option value="type">Sort: Type</option>
-    </select>
-
-  </div>
-
-  <!-- GALLERY -->
-  <div id="gallery" class="gallery"></div>
-
-  <!-- POPUP -->
-  <div id="popupHolder">
-    <div id="popupBack"></div>
-
-    <div id="itemViewPop">
-      <div id="itemViewName"></div>
-      <div id="itemViewType"></div>
-      <iframe id="itemViewFrame"></iframe>
-      <div id="itemInfoBtn">More Information</div>
+    <!-- SEARCH + FILTER BAR -->
+    <div id="controls">
+        <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Search skins..." 
+            aria-label="Search skins" 
+        />
+        <select id="rarity-filter">
+            <option value="">All Rarities</option>
+            <option value="nft">NFT</option>
+            <option value="unobtainable">Unobtainable</option>
+            <option value="contraband">Contraband</option>
+            <option value="relic">Relic</option>
+            <option value="legendary">Legendary</option>
+            <option value="epic">Epic</option>
+            <option value="rare">Rare</option>
+            <option value="uncommon">Uncommon</option>
+            <option value="free">Free</option>
+        </select>
+        <select id="type-filter">
+            <option value="">All Types</option>
+        </select>
+        <select id="sort-select">
+            <option value="rarity">Sort: Rarity</option>
+            <option value="name">Sort: Name</option>
+            <option value="type">Sort: Type</option>
+            <option value="id">Sort: ID</option>
+        </select>
     </div>
-  </div>
 
-  <script src="skins.js"></script>
-  <script src="script.js"></script>
+    <!-- GALLERY -->
+    <div id="gallery" class="gallery"></div>
 
+    <!-- POPUP -->
+    <div id="popupHolder">
+        <div id="popupBack"></div>
+        <div id="itemViewPop">
+            <div id="itemViewName"></div>
+            <div id="itemViewType"></div>
+            <iframe id="itemViewFrame"></iframe>
+            <div id="itemInfoBtn">More Information</div>
+        </div>
+    </div>
+
+    <script src="skins.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
