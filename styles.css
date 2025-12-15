@@ -100,6 +100,7 @@ h1 {
   margin-top: -6px;
 }
 
+.free { border-color: lightgrey; color: lightgrey; }
 .uncommon { border-color: #b2f252; color: #b2f252; }
 .rare { border-color: #2196F3; color: #2196F3; }
 .epic { border-color: #E040FB; color: #E040FB; }
@@ -109,6 +110,7 @@ h1 {
 .unobtainable { animation: rainbow .5s linear infinite; }
 .nft { border-color: #f3b8ff; color: #f3b8ff; }
 
+.itemViewType-free { background-color: lightgrey; color: white; }
 .itemViewType-uncommon { background: #b2f252; color: white; }
 .itemViewType-rare { background: #2196F3; color: white; }
 .itemViewType-epic { background: #E040FB; color: white; }
@@ -118,6 +120,7 @@ h1 {
 .itemViewType-unobtainable { color: white; animation: rainbowBG 0.5s linear infinite; }
 .itemViewType-nft { background: #f3b8ff; color: white; }
 
+.itemViewPop-free { border-color: lightgrey !important; }
 .itemViewPop-uncommon { border-color: #b2f252 !important;}
 .itemViewPop-rare { border-color: #2196F3 !important;}
 .itemViewPop-epic { border-color: #E040FB !important;}
@@ -238,6 +241,7 @@ h1 {
     }
 }
 
+.skin-card.free .skin-name { color: lightgrey; }
 .skin-card.uncommon .skin-name { color: #b2f252; }
 .skin-card.rare .skin-name { color: #2196F3; }
 .skin-card.epic .skin-name { color: #E040FB; }
@@ -246,4 +250,3 @@ h1 {
 .skin-card.contraband .skin-name { color: #292929; }
 .skin-card.unobtainable .skin-name { animation: rainbow 0.5s linear infinite; }
 .skin-card.nft .skin-name { color: #f3b8ff; }
-
