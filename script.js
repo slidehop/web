@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
   }
 
   const rarityLabels = [
-    'Uncommon', 'Rare', 'Epic', 'Legendary',
+    'Free', 'Uncommon', 'Rare', 'Epic', 'Legendary',
     'Relic', 'Contraband', 'Unobtainable', 'NFT'
   ];
 
@@ -26,7 +26,7 @@ window.addEventListener('load', () => {
     const typeId = Number(skin.type);
 
     const skinType = (window.skinTypes?.[weaponId] || window.itemTypes?.[typeId] || "Unknown");
-    const rarityIndex = (typeof skin.rarity === "number" && skin.rarity >= 0 && skin.rarity <= 7) ? skin.rarity : 0;
+    const rarityIndex = (typeof skin.rarity === "number" && skin.rarity >= 0 && skin.rarity <= 8) ? skin.rarity : 0;
     const rarityLabel = rarityLabels[rarityIndex];
 
     return {
@@ -144,6 +144,7 @@ window.addEventListener('load', () => {
     filtered.sort((a, b) => {
       if (sort === "name") return a.name.localeCompare(b.name);
       if (sort === "type") return a.skinType.localeCompare(b.skinType);
+      if (sort === "id") return Number(a.id) - Number(b.id);
       return b.rarityIndex - a.rarityIndex; // default: rarity descending
     });
 
