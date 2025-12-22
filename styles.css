@@ -203,30 +203,29 @@ h1 {
   background: rgba(255,255,255,0.4);
 }
 
-.skin-img[src*="1_203.png"],
-.skin-img[src*="2_203.png"],
-.skin-img[src*="4_184.png"],
-.skin-img[src*="5_4.png"],
-.skin-img[src*="5_256.png"],
-.skin-img[src*="6_m0_216.png"],
-.skin-img[src*="7_121.png"],
-.skin-img[src*="8_m0_161.png"],
-.skin-img[src*="9_74.png"],
-.skin-img[src*="10_m0_41.png"],
-.skin-img[src*="11_118.png"],
-.skin-img[src*="12_10.png"],
-.skin-img[src*="14_45.png"],
-.skin-img[src*="15_242.png"],
-.skin-img[src*="16_32.png"],
-.skin-img[src*="17_101.png"],
-.skin-img[src*="19_71.png"],
-.skin-img[src*="22_15.png"],
-.skin-img[src*="23_9.png"],
-.skin-img[src*="25_11.png"],
-.skin-img[src*="28_13.png"],
-.skin-img[src*="29_3.png"],
-.skin-img[src*="melee_0_10.png"] {
-    -webkit-animation: rgbHue 0.8s steps(36) infinite;
+.skin-img[src*="/1_203.png"],
+.skin-img[src*="/2_203.png"],
+.skin-img[src*="/4_184.png"],
+.skin-img[src*="/5_4.png"],
+.skin-img[src*="/5_256.png"],
+.skin-img[src*="/6_m0_216.png"],
+.skin-img[src*="/7_121.png"],
+.skin-img[src*="/8_m0_161.png"],
+.skin-img[src*="/9_74.png"],
+.skin-img[src*="/10_m0_41.png"],
+.skin-img[src*="/11_118.png"],
+.skin-img[src*="/12_10.png"],
+.skin-img[src*="/14_45.png"],
+.skin-img[src*="/15_242.png"],
+.skin-img[src*="/16_32.png"],
+.skin-img[src*="/17_101.png"],
+.skin-img[src*="/19_71.png"],
+.skin-img[src*="/22_15.png"],
+.skin-img[src*="/23_9.png"],
+.skin-img[src*="/25_11.png"],
+.skin-img[src*="/28_13.png"],
+.skin-img[src*="/29_3.png"],
+.skin-img[src*="/melee_0_10.png"] {
     animation: rgbHue 0.8s steps(36) infinite;
 }
 
